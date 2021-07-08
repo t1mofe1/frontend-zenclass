@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Kumbh Sans', sans-serif;
+}
+
+span {
+	text-align: center;
+}
+
+body {
+	background: url(./assets/pageBG.png), #41cbd3;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.main {
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.profile-card {
+	background: #ffffff;
+	box-shadow: 0px 50px 100px -20px rgba(8, 70, 94, 0.504835);
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#profile-card-background {
+	width: 100%;
+	background-color: #41cbd3;
+	border-radius: 15px 15px 0px 0px;
+}
+
+#profile-user-image {
+	border-radius: 50%;
+	box-shadow: 0px -0px 0px 5px rgba(255, 255, 255, 1);
+	border: 5px white;
+	position: absolute;
+	top: calc(50% - 140px + 96px / 2);
+	left: calc(50% - 96px / 2);
+}
+
+.profile-user-info {
+	text-align: center;
+	margin-top: 72px;
+}
+
+.profile-user-info span {
+	margin-right: 4.25px;
+	margin-left: 4.25px;
+}
+
+#username {
+	color: #2e3349;
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: bold;
+}
+
+#age {
+	color: #6b7082;
+	font-size: 18px;
+	line-height: 18px;
+}
+
+#city {
+	margin-top: 13px;
+	color: #6b7082;
+	font-size: 14px;
+	line-height: 14px;
+}
+
+/* #city:hover {
+	text-decoration: underline;
+	cursor: pointer;
+} */
+
+hr {
+	margin-top: 28px;
+	background-color: #e8e9ec;
+	height: 1px;
+	border: none;
+}
+
+.profile-user-stats {
+	margin-top: 24px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-bottom: 24px;
+}
+
+.stats-card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	/* padding: 10px;
+	width: 60px;
+	border: #a4a4a4 2px solid;
+	border-radius: 10px; */
+}
+
+/* .stats-card:hover {
+	background-color: #d5d5d5;
+	cursor: pointer;
+} */
+
+.stats-amount {
+	color: #2e3349;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 18px;
+}
+
+.stats-name {
+	color: #6b7082;
+	font-size: 10px;
+	line-height: 10px;
+	letter-spacing: 1.5px;
+}
+
+/* ===== Credits ===== */
+
+#credits {
+	font-size: 18px;
+	position: absolute;
+	bottom: 15px;
+	background-color: #1499a0;
+	padding: 20px;
+	border-radius: 10px;
+	color: white;
+}
+
+#credits:hover {
+	cursor: pointer;
+	background-color: #118389;
+}
