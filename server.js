@@ -4,7 +4,6 @@ const app = express();
 app.use(require('compression')());
 app.use(require('cors')());
 app.use(require('helmet')());
-app.use(require('morgan')('dev'));
 
 app.set('json spaces', 2);
 
