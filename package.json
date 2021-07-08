@@ -1,0 +1,26 @@
+{
+	"name": "frontend-vue-kurs",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/t1mofe1/frontend-zenclass.git"
+	},
+	"keywords": [],
+	"author": "T1m0fe1",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/t1mofe1/frontend-zenclass/issues"
+	},
+	"homepage": "https://github.com/t1mofe1/frontend-zenclass#readme",
+	"dependencies": {
+		"compression": "^1.7.4",
+		"cors": "^2.8.5",
+		"express": "^5.0.0-alpha.8",
+		"helmet": "^4.6.0"
+	}
+}
