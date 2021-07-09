@@ -40,7 +40,6 @@ app.get('/', async (req, res) => {
 });
 
 app.get('/:lesson/', async (req, res, next) => {
-	console.log({ lesson: config[req.params.lesson], force: req.query.force });
 	if (config[req.params.lesson] === STATES.DEVELOPMENT) {
 		if (req.query.force !== '1') {
 			res.status(403).send(`You're don't have permissions to see that content!`);

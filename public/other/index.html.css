@@ -55,9 +55,11 @@ body {
 .lesson-card {
 	position: relative;
 	width: 150px;
-	height: 100px;
-	margin-left: 5px;
-	margin-right: 5px;
+	height: 125px;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 	background-color: black;
 	color: white;
 	box-shadow: 7px 7px 12px -3px rgba(0, 0, 0, 0.39);
@@ -75,8 +77,64 @@ body {
 .lesson-card:hover {
 	transition: width 0.5s, height 0.5s, box-shadow 0.5s;
 	width: 175px;
-	height: 125px;
+	height: 150px;
 	box-shadow: 14px 14px 24px -3px rgba(0, 0, 0, 0.39);
+}
+
+@media only screen and (max-width: 1050px) {
+	body {
+		padding: 50px;
+	}
+
+	.lesson-card {
+		width: 125px;
+		height: 100px;
+	}
+
+	.lesson-card:hover {
+		width: 150px;
+		height: 125px;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	body {
+		padding: 25px;
+	}
+
+	.lesson-card {
+		width: 100px;
+		height: 75px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.lesson-card:hover {
+		width: 125px;
+		height: 100px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.cards-wrapper {
+		margin-top: 100px;
+	}
+
+	.title {
+		height: 100px;
+	}
+
+	.lesson-card {
+		width: 75px;
+		height: 50px;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+	.lesson-card:hover {
+		width: 100px;
+		height: 75px;
+	}
 }
 
 .lesson-card > span {
