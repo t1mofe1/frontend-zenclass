@@ -14,73 +14,29 @@ const STATES = {
 };
 
 const config = {
-	1: STATES.COMPLETED,
-	2: STATES.DEVELOPMENT,
-	3: STATES.NOT_STARTED,
-	4: STATES.NOT_STARTED,
-	5: STATES.NOT_STARTED,
-	6: STATES.NOT_STARTED,
-	7: STATES.NOT_STARTED,
-	8: STATES.NOT_STARTED,
-	9: STATES.NOT_STARTED,
-	10: STATES.NOT_STARTED,
-	11: STATES.NOT_STARTED,
-	12: STATES.NOT_STARTED,
-	13: STATES.NOT_STARTED,
-	14: STATES.NOT_STARTED,
-	15: STATES.NOT_STARTED,
+	1: { github: 'https://github.com/t1mofe1/frontend-zenclass/public/1/', state: STATES.COMPLETED },
+	2: { github: 'https://github.com/t1mofe1/frontend-zenclass/public/2/', state: STATES.DEVELOPMENT },
+	3: { github: '', state: STATES.NOT_STARTED },
+	4: { github: '', state: STATES.NOT_STARTED },
+	5: { github: '', state: STATES.NOT_STARTED },
+	6: { github: '', state: STATES.NOT_STARTED },
+	7: { github: '', state: STATES.NOT_STARTED },
+	8: { github: '', state: STATES.NOT_STARTED },
+	9: { github: '', state: STATES.NOT_STARTED },
+	10: { github: '', state: STATES.NOT_STARTED },
+	11: { github: '', state: STATES.NOT_STARTED },
+	12: { github: '', state: STATES.NOT_STARTED },
+	13: { github: '', state: STATES.NOT_STARTED },
+	14: { github: '', state: STATES.NOT_STARTED },
+	15: { github: '', state: STATES.NOT_STARTED },
 };
 
+app.get('/api/lessons', async (req, res) => {
+	res.status(200).send(config);
+});
+
 app.get('/', async (req, res) => {
-	// res.status(200).send(config);
-	res.status(200).send(
-		`<html>
-      <head>
-      <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
-        <style>
-          * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-          }
-
-          body {
-            width: 100vw;
-            height: 100vh;
-            padding: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgb(0, 100, 255);
-          }
-
-          div {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 10px;
-            background: rgb(220, 220, 220);
-          }
-
-          span {
-            text-align: center;
-            font-family: Roboto;
-            font-weight: 300;
-            font-size: 25px;
-          }
-        </style>
-      </head>
-      <body>
-        <div>
-          <span>
-            Тут будут показаны доступные для проверки задания. Пока доступен только 1. <a href="http://${req.host}/1/">*Клик*</a>
-          </span>
-        </div>
-      </body>
-    </html>`,
-	);
+	res.status(200).sendFile(__dirname + '/index.html');
 });
 
 app.get('/:lesson/', async (req, res, next) => {
