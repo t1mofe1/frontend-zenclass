@@ -15,7 +15,7 @@ const STATES = {
 
 const config = {
 	1: { github: 'https://github.com/t1mofe1/frontend-zenclass/tree/main/public/1', state: STATES.COMPLETED },
-	2: { github: 'https://github.com/t1mofe1/frontend-zenclass/tree/main/public/2', state: STATES.DEVELOPMENT },
+	2: { github: 'https://github.com/t1mofe1/frontend-zenclass/tree/main/public/2', state: STATES.COMPLETED },
 	3: { github: '', state: STATES.NOT_STARTED },
 	4: { github: '', state: STATES.NOT_STARTED },
 	5: { github: '', state: STATES.NOT_STARTED },
