@@ -17,11 +17,21 @@ const navbarScene = new ScrollMagic.Scene({
 	duration: 100,
 	offset: -175,
 })
-	.on('progress', (event) => anim1.seek(anim1.duration * event.progress))
+	.on('progress', (event) => {
+		if (window.innerWidth > 850) anim1.seek(anim1.duration * event.progress);
+	})
 	.addTo(controller);
 /* ====== */
 
 /* Scroll */
 document.querySelector('nav .logo')?.addEventListener('click', () => document.querySelector('.header')?.scrollIntoView({ behavior: 'smooth' }));
 document.querySelectorAll(`a[data-href]`).forEach((a) => a.addEventListener('click', () => document.querySelector(a.dataset.href)?.scrollIntoView({ behavior: 'smooth' })));
+/* ====== */
+
+/* Burger */
+document.querySelector('#hamburger').addEventListener('click', () => {
+	document.querySelector('#hamburger').classList.toggle('opened');
+	document.body.classList.toggle('lock');
+	document.querySelector('nav').classList.toggle('show');
+});
 /* ====== */
