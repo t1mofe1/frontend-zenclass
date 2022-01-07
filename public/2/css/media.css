@@ -1,0 +1,54 @@
+@media screen and (max-width: 850px) {
+  body.lock {
+    overflow: hidden;
+  }
+
+  nav {
+    height: 100vh;
+    padding-bottom: 50px;
+    background-color: var(--main-color);
+    transition: transform 0.8s ease;
+    transform: translateY(0);
+  }
+  nav:not(.show) {
+    transform: translateY(-100%);
+  }
+
+  .container-12939-256 > .max-width > div:nth-child(2) > form > div > input:nth-child(1) {
+    margin-right: 15px;
+  }
+}
+@media screen and (min-width: 851px) {
+  #hamburger {
+    display: none;
+  }
+
+  nav {
+    padding: 0 65px;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  nav .logo {
+    cursor: pointer;
+  }
+  nav .max-width > ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav .max-width > ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin-right: 25px;
+  }
+  nav .max-width > ul li a {
+    text-align: center;
+  }
+  nav .max-width > ul li:last-child {
+    margin-right: 0;
+  }
+}
+
+/*# sourceMappingURL=media.css.map */

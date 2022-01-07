@@ -38,7 +38,7 @@ body {
 body {
   line-height: 1;
   font-size: 14px;
-  font-family: "Lato";
+  font-family: var(--font-family);
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -47,7 +47,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Lato";
+  font-family: var(--font-family);
 }
 
 input::-ms-clear {
@@ -63,6 +63,10 @@ button::-moz-focus-inner {
   border: 0;
 }
 
+a {
+  cursor: pointer;
+}
+
 a,
 a:visited {
   text-decoration: none;
@@ -74,10 +78,6 @@ a:hover {
 
 ul li {
   list-style: none;
-}
-
-img {
-  vertical-align: top;
 }
 
 h1,
